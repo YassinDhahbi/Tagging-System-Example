@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eeb29ba6e8fe0e4a820098041cae314, type: 3}
+  m_Name: EventManager
+  m_EditorClassIdentifier: 
+  OnButtonPressed: {fileID: 11400000, guid: fd096f21b70bd50439ea54f941b0e69f, type: 2}
+  OnButtonReleased: {fileID: 11400000, guid: 57fb113d14913d44d8c63b8d67ba8d15, type: 2}
+  OnGameStart: {fileID: 11400000, guid: d10f8a1143c527d4a9e87b7029ebdb1c, type: 2}
