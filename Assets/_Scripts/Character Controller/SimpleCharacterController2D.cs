@@ -24,6 +24,9 @@ namespace YassinDhahbi
         [SerializeField]
         public bool isJumping;
 
+        [SerializeField]
+        private int numberOfJumpsLeft;
+
         private SpriteRenderer spriteRenderer;
         private AnimationHandler animationHandler;
 
@@ -32,12 +35,17 @@ namespace YassinDhahbi
             playerRb = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             animationHandler = GetComponent<AnimationHandler>();
+            numberOfJumpsLeft = 0;
         }
 
         public void Jump()
         {
-            playerRb.velocity += Vector2.up * jumpForce;
-            animationHandler.PlayAnimation(PlayerAnimationTag.Jump);
+            if (isJumping == true && numberOfJumpsLeft > 0)
+            {
+                numberOfJumpsLeft = 0;
+                playerRb.velocity += Vector2.up * jumpForce;
+                animationHandler.PlayAnimation(PlayerAnimationTag.Jump);
+            }
         }
 
         public void LandingBehaviour()
@@ -74,6 +82,11 @@ namespace YassinDhahbi
         public void SetJumpingState(bool state)
         {
             isJumping = state;
+        }
+
+        public void SetNumberOfJumps(int x)
+        {
+            numberOfJumpsLeft += x;
         }
     }
 }

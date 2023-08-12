@@ -186,6 +186,38 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &173685489
+GameObject:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 173685490}
+  m_Layer: 0
+  m_Name: ParameteredGameEvents
+  m_TagString: Folder
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &173685490
+Transform:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173685489}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 721367692}
+  m_Father: {fileID: 514328271}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &218275422
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +698,7 @@ Transform:
   m_Children:
   - {fileID: 321352147}
   - {fileID: 1334019507}
+  - {fileID: 173685490}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1113,6 +1146,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &721367691
+GameObject:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 721367692}
+  m_Layer: 0
+  m_Name: BoolGameEvents
+  m_TagString: Folder
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &721367692
+Transform:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721367691}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2007312850}
+  m_Father: {fileID: 173685490}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &756253058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,23 +1233,11 @@ MonoBehaviour:
       - m_Target: {fileID: 218275423}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: UpdateNumberOfButtons
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: -1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 218275423}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ShowWinPanel
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 249450352}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1404,23 +1457,11 @@ MonoBehaviour:
       - m_Target: {fileID: 218275423}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: UpdateNumberOfButtons
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 218275423}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ShowWinPanel
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 249450352}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1678,11 +1719,11 @@ GameObject:
   - component: {fileID: 1243582052}
   - component: {fileID: 1243582053}
   - component: {fileID: 1243582055}
-  - component: {fileID: 1243582057}
   - component: {fileID: 1243582054}
-  - component: {fileID: 1243582056}
   - component: {fileID: 1243582058}
   - component: {fileID: 1243582059}
+  - component: {fileID: 1243582057}
+  - component: {fileID: 1243582060}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1839,67 +1880,6 @@ MonoBehaviour:
     animationName: Walk
   - tag: 2
     animationName: Jump
---- !u!114 &1243582056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1243582048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7019fd2c7467f44a98213476cca6199, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnTriggerEnterResponse:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTriggerExitResponse:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTriggerEnterResponse2D:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTriggerExitResponse2D:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCollisonEnterResponse:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCollisonExitResponse:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCollisonEnterResponse2D:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1243582057}
-        m_TargetAssemblyTypeName: YassinDhahbi.SimpleCharacterController2D, Assembly-CSharp
-        m_MethodName: LandingBehaviour
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Walk
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1243582057}
-        m_TargetAssemblyTypeName: YassinDhahbi.SimpleCharacterController2D, Assembly-CSharp
-        m_MethodName: SetJumpingState
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Walk
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnCollisonExitResponse2D:
-    m_PersistentCalls:
-      m_Calls: []
-  targetTag: {fileID: 11400000, guid: 3ba1c673332e58f47b14ee592f5c43f7, type: 2}
 --- !u!114 &1243582057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1917,6 +1897,7 @@ MonoBehaviour:
   maxSpeed: 10
   moveDirection: {x: 0, y: 0}
   isJumping: 0
+  numberOfJumpsLeft: 0
 --- !u!114 &1243582058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2030,6 +2011,79 @@ CapsuleCollider2D:
   m_Offset: {x: 0.06771648, y: 0}
   m_Size: {x: 1.259362, y: 2.235294}
   m_Direction: 0
+--- !u!114 &1243582060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243582048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7019fd2c7467f44a98213476cca6199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTriggerEnterResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTriggerExitResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTriggerEnterResponse2D:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTriggerExitResponse2D:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCollisonEnterResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCollisonExitResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCollisonEnterResponse2D:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1243582057}
+        m_TargetAssemblyTypeName: YassinDhahbi.SimpleCharacterController2D, Assembly-CSharp
+        m_MethodName: LandingBehaviour
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Walk
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1243582057}
+        m_TargetAssemblyTypeName: YassinDhahbi.SimpleCharacterController2D, Assembly-CSharp
+        m_MethodName: SetJumpingState
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Walk
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1243582057}
+        m_TargetAssemblyTypeName: YassinDhahbi.SimpleCharacterController2D, Assembly-CSharp
+        m_MethodName: SetNumberOfJumps
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: Walk
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnCollisonExitResponse2D:
+    m_PersistentCalls:
+      m_Calls: []
+  targetTag: {fileID: 11400000, guid: 3ba1c673332e58f47b14ee592f5c43f7, type: 2}
 --- !u!1 &1334019506
 GameObject:
   m_ObjectHideFlags: 2
@@ -4023,7 +4077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826442829}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5524,6 +5578,71 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2007312849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2007312850}
+  - component: {fileID: 2007312851}
+  m_Layer: 0
+  m_Name: OnGameEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2007312850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007312849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 721367692}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2007312851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007312849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791e3eca91bfc2e41b38477d0ecfaf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 0}
+  _event: {fileID: 11400000, guid: 7f8645efa595b4c49b82f8e6f8313c6b, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 249450352}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _debugValue: 0
 --- !u!1 &2038651208
 GameObject:
   m_ObjectHideFlags: 0

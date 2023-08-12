@@ -15,6 +15,8 @@ public class EventManager : ScriptableObjectSingleton<EventManager>
 
     public GameObjectGameEvent OnGameStart;
 
+    public BoolGameEvent OnGameEnd;
+
     #endregion Parametered GameEvents
 
     [ContextMenu("Start game")]

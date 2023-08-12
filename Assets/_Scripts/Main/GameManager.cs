@@ -19,10 +19,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void UpdateNumberOfButtons(int additionValue)
+    public void UpdateNumberOfButtons()
     {
-        buttonsManager.currentNumberOfPressedButtons += additionValue;
         buttonsManager.SyncColorWithNumber();
+        EventManager.Instance.OnGameEnd.Raise(buttonsManager.IsTargetReached());
     }
 
     public void AddButton(GameObject button)
@@ -64,6 +64,15 @@ public class ButtonsManager
 
     public void SyncColorWithNumber()
     {
+        var currentPressedBtns = 0;
+        foreach (var item in listOfInteractableButtons)
+        {
+            if (item.GetIsPressed())
+            {
+                currentPressedBtns++;
+            }
+        }
+        currentNumberOfPressedButtons = currentPressedBtns;
         ResetColor();
         for (int i = 0; i < currentNumberOfPressedButtons; i++)
         {

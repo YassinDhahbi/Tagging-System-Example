@@ -16,4 +16,9 @@ public class InteractableButton : MonoBehaviour
     {
         isPressed = state;
     }
+
+    public bool GetIsPressed()
+    {
+        return isPressed;
+    }
 }
